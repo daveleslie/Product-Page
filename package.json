@@ -2,7 +2,7 @@
   "name": "product-page",
   "version": "1.0.0",
   "description": "Product landing page for Free Code Camp Responsive Web Design certificate",
-  "main": "public/index.html",
+  "main": "index.html",
   "scripts": {
     "test": "test",
     "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
