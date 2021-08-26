@@ -7,35 +7,87 @@
   <title>FCC Product Landing Page</title>
   <link rel="stylesheet" type="text/css" href="public/styles.css">
 </head>
-<body class="container">
-  <header id="header" class="flex fixed">
-    <div class="ml-10">
-      <img id="header-img" src="public/img/Logosmall.png" alt="company logo">
+<body class="bg-gray-500">
+  <div class="content-wrapper mx-20">
+
+  
+
+  <header id="header" class="bg-white shadow-lg fixed left-20 right-20">
+
+    <!-- containment div for all navigation elements -->
+    <div class="max-w-6xl mx-auto px-4">
+
+      <!-- containment div to make navigation elements lie side by side -->
+      <div class="flex justify-between">
+
+        <!-- containment div adds space between div elements -->
+        <div class="flex space-x-7">
+
+          <!-- website logo -->
+          <div>
+            <a href="#">
+              <img id="header-img" class="mr-4" src="public/img/Logosmall.png" alt="company logo">
+            </a>
+          </div>
+
+          <!-- primary navbar items -->
+          <nav id="nav-bar" class="hidden md:flex items-center space-x-1">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#howitworks" class="nav-link">How it works</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+          </nav>
+
+          <!-- mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-gray-500"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12H16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- mobile menu -->
+          <div class="hidden mobile-menu">
+            <ul class="">
+              <li class="active"><a href="#features" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Features</a></li>
+              <li><a href="#howitworks" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">How it works</a></li>
+		          <li><a href="#pricing" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <nav id="nav-bar" class="flex items-center">
-      <ul>
-       <li class="inline"><a href="#features" class="nav-link">Features</a></li>
-       <li class="inline"><a href="#howitworks" class="nav-link">How it works</a></li>
-       <li class="inline"><a href="#pricing" class="nav-link">Pricing</a></li> 
-      </ul>
-    </nav>
   </header>
-  <main class="px-16 py-8 pt-40">
-    <section>
+
+  <div class="pt-16">
+    <section class="bg-primary h-32 flex items-center justify-center">
+
       <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
         <label for="email" id="email-label">Email address</label>
         <input id="email" name= "email" type="email" placeholder="Please enter your email">
-        <input id="submit" type="submit">
+        <input id="submit" type="submit" class="bg-secondary text-gray-100 rounded-md px-1">
       </form>
     </section>
-    <section id="features" class="h-80">
+  </div>
+  <!-- main content -->
+  <main class="px-16 py-8 pt-40 bg-white">
+    
+    <section id="features" class="h-80 pt-16">
       <div>
         Features go here
       </div>
     </section>
 
-    <section id="howitworks">
+    <section id="howitworks" class="pt-16">
       <div>How it works goes here</div>
       <iframe 
         id="video"
@@ -44,11 +96,21 @@
       ></iframe>
     </section>
 
-    <section id="pricing" class="h-80">
+    <section id="pricing" class="pt-16 h-80">
       <div>Pricing info goes here</div>
     </section>
   </main>
-  
+  </div>
 </body>
+<script>
+	// Grab HTML Elements
+	const btn = document.querySelector("button.mobile-menu-button");
+	const menu = document.querySelector(".mobile-menu");
+
+	// Add Event Listeners
+	btn.addEventListener("click", () => {
+	menu.classList.toggle("hidden");
+	});
+</script>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
