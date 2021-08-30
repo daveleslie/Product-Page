@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FCC Product Landing Page</title>
   <link rel="stylesheet" type="text/css" href="public/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-gray-500">
+<body class="bg-tertiary">
   <div class="content-wrapper mx-20">
 
   
@@ -79,25 +80,49 @@
     </section>
   </div>
   <!-- main content -->
-  <main class="px-16 py-8 pt-40 bg-white">
+  <main class="px-16 py-8 bg-gray-100">
     
-    <section id="features" class="h-80 pt-16">
-      <div>
-        Features go here
+    <section id="features" class="h-80 pt-16 px-10 border-t flex flex-col">
+
+      <h3 class="text-center text-2xl py-4">Product Features</h3>
+
+      <div class="grid grid-cols-3">
+        <div class="bg-white border rounded shadow-lg flex flex-col items-center py-2 px-5 mx-2 ">
+          <h4 class="mb-2">Feature 1A</h4>
+          <i class="fa fa-flash fa-5x text-primary"></i>
+        </div>
+        
+        <div class="bg-white border rounded-sm shadow-lg flex flex-col items-center py-2 px-5 mx-2 ">
+          <h4 class="mb-2">Feature 2</h4>
+          <i class="fa fa-bar-chart fa-5x text-secondary"></i>
+        </div>
+  
+        <div class="bg-white border rounded-sm shadow-lg flex flex-col items-center py-2 px-5 mx-2 ">
+          <h4 class="mb-2">Feature 3</h4>
+          <i class="fa fa-cogs fa-5x text-tertiary"></i>
+        </div>
       </div>
+      
+
     </section>
 
-    <section id="howitworks" class="pt-16">
-      <div>How it works goes here</div>
-      <iframe 
+    <section id="howitworks" class="pt-2 border-t flex flex-col justify-center items-center">
+      <h3 class="text-center text-2xl py-4">How it works</h3>
+      <div>
+        <iframe 
         id="video"
         width="560" height="315" src="https://www.youtube.com/embed/f_a3c_EbCSo" title="How do smart meters work" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-      ></iframe>
+        ></iframe>
+      </div>
+      
     </section>
 
-    <section id="pricing" class="pt-16 h-80">
-      <div>Pricing info goes here</div>
+    <section id="pricing" class="pt-6 h-80 border-t mt-4">
+      <h3 class="text-center text-2xl py-4">Pricing</h3>
+      <div>
+        <button class="submit bg-secondary p-2 text-white hover:bg-primary"><a href="#features">Submit</a></button>
+      </div>
     </section>
   </main>
   </div>
