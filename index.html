@@ -118,10 +118,24 @@
       
     </section>
 
-    <section id="pricing" class="pt-6 h-80 border-t mt-4">
+    <section id="pricing" class="pt-6 px-20 pb-10 border-t mt-4 flex flex-col">
       <h3 class="text-center text-2xl py-4">Pricing</h3>
-      <div>
-        <button class="submit bg-secondary p-2 text-white hover:bg-primary"><a href="#features">Submit</a></button>
+      <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-2">
+        
+        <div class="border bg-secondary flex flex-col justify-center items-center text-white w-96 mx-auto py-2">
+          <h4 class="text-xl font-semibold">Pricing Option 1</h4>
+          <h3 class=" text-4xl font-extrabold">$200</h3>
+          <p>billed annually</p>
+          <button class="bg-tertiary hover:bg-primary px-1 my-2">find out more</button>
+        </div>
+        
+        <div class="border bg-secondary flex flex-col justify-center items-center text-white w-96 mx-auto">
+          <h4 class="text-xl font-semibold">Pricing option 2</h4>
+          <h3 class="text-4xl font-extrabold">$20</h3>
+          <p>billed monthly</p>
+          <button class="bg-tertiary hover:bg-primary px-1 my-2">find out more</button>
+        </div>
+        
       </div>
     </section>
   </main>
